@@ -1,0 +1,108 @@
+/* ==========================================================================
+   ANIMATIONS — Keyframes & the Unified Reveal System
+   ========================================================================== */
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes caret-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.4; transform: scaleY(0.7); }
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+@keyframes badge-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes badge-float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+@keyframes ripple-expand {
+  from { opacity: 0.6; }
+  to { opacity: 0; }
+}
+
+@keyframes click-burst-fade {
+  from { opacity: 1; transform: scale(0); }
+  to { opacity: 0; transform: scale(1); }
+}
+
+/* ==========================================================================
+   UNIFIED REVEAL SYSTEM
+   Every entrance animation on the site — hero load-in included — uses this
+   ONE class pair (.reveal / .reveal.visible) driven by the motion tokens in
+   variables.css. Stagger is computed by JS as a --i index per element
+   (see js/scroll.js), so there are no hardcoded "-delay-1/2/3/4" classes
+   duplicated per section anymore.
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--motion-translate));
+  filter: blur(var(--motion-blur));
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease),
+    filter var(--motion-duration) var(--motion-ease);
+  transition-delay: calc(var(--i, 0) * var(--motion-stagger-step));
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Alternating-side variant — used ONLY by the Experience timeline, where
+   left/right carries real meaning (alternating history). Same duration,
+   easing and blur as every other reveal; only the axis of motion differs. */
+.reveal-left { transform: translateX(-60px); }
+.reveal-left.visible { transform: translateX(0); }
+
+.reveal-right { transform: translateX(60px); }
+.reveal-right.visible { transform: translateX(0); }
+
+/* ---- Ambient / decorative loops (not part of the reveal system) ---- */
+.hero-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: orb-float 8s ease-in-out infinite;
+}
+.hero-glow-orb.orb-a {
+  width: 620px; height: 620px;
+  background: radial-gradient(circle, rgba(155,107,255,0.16) 0%, transparent 70%);
+  top: -140px; right: -140px;
+}
+.hero-glow-orb.orb-b {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(79,227,255,0.12) 0%, transparent 70%);
+  bottom: -60px; left: 80px;
+  animation-direction: reverse;
+  animation-duration: 6.5s;
+}
+
+.scroll-line { animation: scroll-pulse 1.8s ease-in-out infinite; }
+
+.float-badge { animation: badge-drift 5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1; transform: none; filter: none; transition: none;
+  }
+  .project-tag { opacity: 1; transform: none; transition: none; }
+  .badge { animation: none; opacity: 1; }
+  .hero-glow-orb, .float-badge, .scroll-line, .hero-tag::before, .timeline-dot.in-view { animation: none; }
+}

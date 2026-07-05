@@ -1,0 +1,85 @@
+/* ==========================================================================
+   VARIABLES — Design Tokens
+   Palette: "Neural Singularity" — deep space black with cyan/violet plasma
+   ========================================================================== */
+
+:root {
+  /* ---- Surfaces ---- */
+  --bg-void: #030303;          /* base deep space black */
+  --bg-deep: #06060c;          /* secondary panel background */
+  --bg-panel: #0a0a14;         /* raised panel background */
+  --glass-fill: rgba(255, 255, 255, 0.035);
+  --glass-fill-hover: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(140, 170, 255, 0.14);
+  --glass-border-hover: rgba(96, 214, 255, 0.45);
+
+  /* ---- Plasma Accents ---- */
+  --cyan: #4fe3ff;
+  --cyan-dim: rgba(79, 227, 255, 0.16);
+  --violet: #9b6bff;
+  --violet-dim: rgba(155, 107, 255, 0.16);
+  --mint: #4dffb4;
+  --mint-dim: rgba(77, 255, 180, 0.14);
+  --gradient-aurora: linear-gradient(135deg, var(--cyan) 0%, var(--violet) 100%);
+  --gradient-aurora-soft: linear-gradient(135deg, rgba(79,227,255,0.25), rgba(155,107,255,0.25));
+
+  /* ---- Text ---- */
+  --text-primary: #eef3fb;
+  --text-secondary: #93a1bd;
+  --text-muted: #5c6883;
+  --text-on-accent: #041014;
+
+  /* ---- Typography ---- */
+  --font-display: 'Space Grotesk', 'Outfit', sans-serif;
+  --font-body: 'Inter', 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Space Mono', monospace;
+
+  /* ---- Spacing scale ---- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 100px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows / Glow ---- */
+  --glow-cyan: 0 0 40px rgba(79, 227, 255, 0.22);
+  --glow-violet: 0 0 40px rgba(155, 107, 255, 0.22);
+  --shadow-lift: 0 24px 60px rgba(0, 0, 0, 0.5);
+
+  /* ---- Motion ---- */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.4s;
+  --dur-slow: 0.8s;
+
+  /* ---- UNIFIED MOTION SYSTEM ----
+     Every reveal, hover, and load-in animation in the site pulls from
+     these tokens ONLY. Change a value here and it updates everywhere. */
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);   /* one easing curve, site-wide */
+  --motion-duration: 0.8s;                          /* one reveal duration, site-wide */
+  --motion-hover-duration: 0.25s;                   /* one hover/interaction duration */
+  --motion-blur: 15px;                              /* reveal blur start amount */
+  --motion-translate: 60px;                         /* reveal translateY start amount */
+  --motion-stagger-step: 120ms;                     /* delay between staggered siblings */
+  --motion-hover-lift: -6px;                        /* the ONE lift distance every card/button uses */
+  --motion-hover-scale: 1.03;                       /* the ONE hover scale every button uses */
+
+  /* ---- Layout ---- */
+  --content-max: 1240px;
+  --nav-pad-x: 60px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-pad-x: 24px;
+    --space-2xl: 70px;
+  }
+}

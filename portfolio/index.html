@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sandeep Kumar — AI/ML Engineer</title>
+<meta name="description" content="Sandeep Kumar — AI/ML Engineer building LLM pipelines, RAG applications, computer vision and multi-agent AI systems." />
+
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/intro.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-ring"></div>
+</div>
+
+<!-- CINEMATIC INTRO -->
+<canvas id="intro-canvas" aria-hidden="true"></canvas>
+<button id="skip-intro" type="button">Skip Intro →</button>
+
+<!-- AMBIENT BACKGROUND -->
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#hero" class="nav-logo">SK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-glow-orb orb-a"></div>
+    <div class="hero-glow-orb orb-b"></div>
+
+    <div class="hero-float-badges" aria-hidden="true">
+      <span class="float-badge" style="top:18%; left:6%; animation-delay:0s;">LangChain</span>
+      <span class="float-badge" style="top:68%; left:4%; animation-delay:1.2s;">PyTorch</span>
+      <span class="float-badge" style="top:12%; left:82%; animation-delay:0.6s;">RAG</span>
+      <span class="float-badge" style="top:75%; left:80%; animation-delay:1.8s;">FastAPI</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal reveal-hero" style="--i:0;">Available for Internships & Collaborations</div>
+      <h1 class="hero-name reveal reveal-hero" style="--i:1;">
+        Sandeep<br>
+        <span class="line2">Kumar</span>
+      </h1>
+      <p class="hero-role reveal reveal-hero" style="--i:2;"><span id="role-text"></span><span class="caret"></span></p>
+      <p class="hero-desc reveal reveal-hero" style="--i:3;">
+        B.Tech CSE student building intelligent systems — from LLM pipelines and RAG applications to computer vision and multi-agent AI. I turn complex ideas into real, working products.
+      </p>
+      <div class="hero-btns reveal reveal-hero" style="--i:4; display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="https://github.com/Sandeep37-s" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-stats reveal reveal-hero" style="--i:5;">
+      <div class="stat-card glass-card">
+        <span class="stat-num" data-value="7.3">7.3</span>
+        <span class="stat-label">CGPA / 10</span>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-num" data-value="3">3+</span>
+        <span class="stat-label">Internships</span>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-num" data-value="5">5</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-num" data-value="10">10+</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-text">
+        <div class="section-eyebrow reveal">01 · About</div>
+        <h2 class="section-title reveal">Who I <em>Am</em></h2>
+        <p class="reveal reveal-left">I'm a B.Tech Computer Science and Engineering student at the Central University of Jammu with practical experience in Machine Learning, Data Science, Generative AI, Retrieval-Augmented Generation (RAG), Computer Vision, and Large Language Models. I enjoy building AI-powered applications that solve real-world problems.</p>
+        <p class="reveal reveal-left">From end-to-end ML workflows to LLM-powered multi-agent systems, I enjoy the full stack of AI engineering — data, models, APIs, and deployment. I'm especially drawn to RAG, computer vision, and autonomous AI agents.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-row glass-card reveal reveal-right">
+          <span class="fact-icon">🤖</span>
+          <div>
+            <div class="fact-title">Machine Learning & AI</div>
+            <div class="fact-desc">End-to-end ML pipelines: preprocessing, training, evaluation, and deployment using Python, scikit-learn, TensorFlow, and PyTorch.</div>
+          </div>
+        </div>
+        <div class="fact-row glass-card reveal reveal-right">
+          <span class="fact-icon">🧠</span>
+          <div>
+            <div class="fact-title">Generative AI & LLMs</div>
+            <div class="fact-desc">Building LLM applications with LangChain, RAG architectures, ChromaDB, LangGraph, CrewAI, and prompt engineering.</div>
+          </div>
+        </div>
+        <div class="fact-row glass-card reveal reveal-right">
+          <span class="fact-icon">👁️</span>
+          <div>
+            <div class="fact-title">Computer Vision & NLP</div>
+            <div class="fact-desc">Image analysis with OpenCV, HSV color detection, and natural language processing using NLTK and transformers.</div>
+          </div>
+        </div>
+        <div class="fact-row glass-card reveal reveal-right">
+          <span class="fact-icon">🚀</span>
+          <div>
+            <div class="fact-title">Deployment & APIs</div>
+            <div class="fact-desc">Deploying AI applications with Flask and FastAPI, containerized with Docker, integrated with MySQL.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">02 · Skills</div>
+      <h2 class="section-title reveal">Tech <em>Stack</em></h2>
+      <div class="skills-grid">
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-title">Languages</div>
+          <div class="skill-badges">
+            <span class="badge">Python</span>
+            <span class="badge">C</span>
+            <span class="badge">C++</span>
+            <span class="badge">Java</span>
+            <span class="badge">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-title">AI / ML Frameworks</div>
+          <div class="skill-badges">
+            <span class="badge">TensorFlow</span>
+            <span class="badge">PyTorch</span>
+            <span class="badge">Scikit-learn</span>
+            <span class="badge">NLTK</span>
+            <span class="badge">OpenCV</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-title">GenAI & LLM</div>
+          <div class="skill-badges">
+            <span class="badge">LangChain</span>
+            <span class="badge">LangGraph</span>
+            <span class="badge">CrewAI</span>
+            <span class="badge">RAG</span>
+            <span class="badge">ChromaDB</span>
+            <span class="badge">MCP</span>
+            <span class="badge">Prompt Eng.</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-title">Deployment & Tools</div>
+          <div class="skill-badges">
+            <span class="badge">Flask</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Git/GitHub</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Jupyter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">03 · Experience</div>
+      <h2 class="section-title reveal">Work <em>History</em></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-period">Jan 2026 – Jun 2026</div>
+            <div class="timeline-role">AI Intern</div>
+            <div class="timeline-company">National Informatics Centre (NIC)</div>
+            <ul class="timeline-bullets">
+              <li>Developed a Retrieval-Augmented Generation (RAG) based document intelligence system for indexing and querying PDF documents.</li>
+              <li>Built an AI-powered land information chatbot using LLMs, Vector Databases and Semantic Search.</li>
+              <li>Implemented end-to-end Generative AI pipelines involving document processing, embeddings, prompt engineering and context-aware response generation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-period">May 2025 – Jun 2025</div>
+            <div class="timeline-role">Machine Learning Intern</div>
+            <div class="timeline-company">Vaishnav Technologies · Online</div>
+            <ul class="timeline-bullets">
+              <li>Developed ML pipelines using Python and scikit-learn for classification and regression tasks.</li>
+              <li>Worked on data preprocessing, model training, evaluation, and feature engineering.</li>
+              <li>Gained practical exposure to real-world datasets and ML best practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-period">Jan 2025 – Feb 2025</div>
+            <div class="timeline-role">GenAI Intern</div>
+            <div class="timeline-company">Innomatics Research Labs · Online</div>
+            <ul class="timeline-bullets">
+              <li>Built LLM-based applications with a focus on prompt engineering and GenAI workflows.</li>
+              <li>Designed and optimized prompts for improved reasoning and context understanding.</li>
+              <li>Assisted in building end-to-end GenAI pipelines for context-aware intelligent applications.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">04 · Projects</div>
+      <h2 class="section-title reveal">Featured <em>Work</em></h2>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card reveal">
+          <div class="project-type">GenAI · Multi-Agent System</div>
+          <div class="project-title">Financial Deep Research Agent</div>
+          <div class="project-desc">A multi-agent GenAI system for financial research with query planning and sector-based routing. Integrates RAG with ChromaDB, web search, and financial APIs for market analysis. Deployed with LangGraph/CrewAI and FastAPI.</div>
+          <div class="project-tags">
+            <span class="project-tag">LangGraph</span>
+            <span class="project-tag">CrewAI</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">ChromaDB</span>
+            <span class="project-tag">RAG</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-type">Computer Vision</div>
+          <div class="project-title">AyuScan — AI Health Analyzer</div>
+          <div class="project-desc">A computer vision-based health analysis system detecting visible health indicators from facial images using OpenCV and HSV color analysis. Deployed as an end-to-end Flask web application for image processing and result visualization.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">HSV Analysis</span>
+            <span class="project-tag">Flask</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-type">AI · Automation · Privacy</div>
+          <div class="project-title">WildGuard AI — Crime Reporting Bot</div>
+          <div class="project-desc">An AI-powered Telegram bot for anonymous wildlife crime classification and reporting. Features MySQL-based secure storage, real-time admin alerting, and a privacy-first architecture protecting user identity.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Telegram Bot</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">AI Classification</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-type">Research · Cybersecurity</div>
+          <div class="project-title">Intrusion Detection Systems: A Review</div>
+          <div class="project-desc">A systematic research review of classical, ML-based, and hybrid intrusion detection approaches. Compares accuracy, precision, recall, and F1-score while analyzing deployment feasibility, scalability, and latency in real environments.</div>
+          <div class="project-tags">
+            <span class="project-tag">Research</span>
+            <span class="project-tag">IDS</span>
+            <span class="project-tag">Cybersecurity</span>
+            <span class="project-tag">ML Review</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">05 · Education</div>
+      <h2 class="section-title reveal">Academic <em>Background</em></h2>
+      <div class="edu-card glass-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
+          <div class="edu-school">Central University of Jammu, J&K</div>
+          <div class="edu-period">Sep 2022 – May 2026</div>
+          <div class="edu-cgpa">📊 CGPA: <span class="counter-num" data-value="7.2">7.2</span> / 10 &nbsp;·&nbsp; Till 6th Semester</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">06 · Contact</div>
+      <h2 class="section-title reveal">Let's <em>Connect</em></h2>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-text reveal reveal-left">
+            I'm open to internship opportunities, project collaborations, research discussions, and AI/ML development roles. Whether it's Machine Learning, Generative AI, or intelligent automation — I'd love to connect and build something meaningful together.
+          </p>
+          <div class="contact-items">
+            <a href="tel:+916005362383" class="contact-item glass-card reveal reveal-left">
+              <span class="contact-item-icon">📞</span>
+              <div>
+                <div class="contact-item-label">Phone</div>
+                <div class="contact-item-val">+91-6005362383</div>
+              </div>
+            </a>
+            <a href="mailto:22becse37.cse@cujammu.ac.in" class="contact-item glass-card reveal reveal-left">
+              <span class="contact-item-icon">✉️</span>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-val">22becse37.cse@cujammu.ac.in</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/sandeep-kumar" target="_blank" rel="noopener" class="contact-item glass-card reveal reveal-left">
+              <span class="contact-item-icon">💼</span>
+              <div>
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-val">linkedin.com/in/sandeep-kumar</div>
+              </div>
+            </a>
+            <a href="https://github.com/Sandeep37-s" target="_blank" rel="noopener" class="contact-item glass-card reveal reveal-left">
+              <span class="contact-item-icon">🐙</span>
+              <div>
+                <div class="contact-item-label">GitHub</div>
+                <div class="contact-item-val">github.com/Sandeep37-s</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form-side reveal reveal-right" onsubmit="return false;">
+          <div class="form-group">
+            <input type="text" id="cf-name" placeholder=" " required />
+            <label for="cf-name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="cf-email" placeholder=" " required />
+            <label for="cf-email">Email Address</label>
+          </div>
+          <div class="form-group">
+            <textarea rows="5" id="cf-message" placeholder=" " required></textarea>
+            <label for="cf-message">Message</label>
+          </div>
+          <a href="mailto:22becse37.cse@cujammu.ac.in" class="btn btn-primary" style="text-align:center;">Send Message →</a>
+          <p class="form-note">This will open your email client with pre-filled details.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <span class="footer-logo">SK.</span>
+  <span>© 2025 Sandeep Kumar · Built with HTML, CSS & JS</span>
+  <div class="social-links">
+    <a href="https://github.com/Sandeep37-s" target="_blank" rel="noopener" class="social-link">GH</a>
+    <a href="https://linkedin.com/in/sandeep-kumar" target="_blank" rel="noopener" class="social-link">LI</a>
+    <a href="mailto:22becse37.cse@cujammu.ac.in" class="social-link">✉</a>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
