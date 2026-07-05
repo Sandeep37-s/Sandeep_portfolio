@@ -1,0 +1,56 @@
+/* ==========================================================================
+   INTRO — Cinematic "Neural Singularity" loading sequence
+   Everything related to the pre-content loader, black-hole canvas, and the
+   skip control lives here, isolated from the rest of the site's styles.
+   ========================================================================== */
+
+/* ---- Full-screen intro canvas (sits above everything while it plays) ---- */
+#intro-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg-void);
+}
+
+/* ---- Loader shown for a beat before the intro canvas takes over ---- */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-void);
+}
+
+.loader-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--glass-border);
+  border-top-color: var(--cyan);
+  animation: spin 0.9s linear infinite;
+}
+
+/* ---- Skip intro control ---- */
+#skip-intro {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  z-index: 10002;
+  padding: 10px 22px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  background: var(--glass-fill);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: border-color var(--motion-hover-duration) var(--motion-ease), color var(--motion-hover-duration) var(--motion-ease);
+}
+#skip-intro:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
